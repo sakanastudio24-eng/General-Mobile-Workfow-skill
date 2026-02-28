@@ -1,6 +1,6 @@
 ---
 name: general-mobile-workflows
-description: End-to-end mobile engineering workflow for React Native, Expo, Swift, Kotlin, and Kotlin Multiplatform projects. Use when planning or building mobile features, choosing stack boundaries, integrating native modules/services, handling CI/CD and app signing, troubleshooting build/runtime issues, upgrading SDK or framework versions, shipping OTA updates, or enforcing mobile security and release guardrails.
+description: End-to-end mobile engineering workflow for React Native, Expo, Swift, Kotlin, and Kotlin Multiplatform projects. Use when planning or building mobile features, choosing stack boundaries, integrating native modules/services, handling CI/CD and app signing, troubleshooting build/runtime issues, upgrading SDK or framework versions, passing Android Gradle builds, shipping Expo production builds/deploys, or enforcing mobile security and release guardrails.
 ---
 
 # General Mobile Workflows
@@ -11,9 +11,11 @@ Use this skill to deliver mobile work quickly with clear tradeoffs, safe default
 
 1. Start in `references/examples-and-resources.md` to pick a known-good pattern and sample.
 2. Use `references/react-native-expo.md` for React Native and Expo work, including EAS build/update and native module boundaries.
-3. Use `references/swift-ios.md` for Swift and iOS-native implementation details.
-4. Use `references/kotlin-android-kmp.md` for Android-native Kotlin and Kotlin Multiplatform.
-5. Apply `references/mobile-security.md` before merge and release.
+3. Use `references/expo-production-deploy.md` for production-grade Expo build and store delivery.
+4. Use `references/gradle-build-pass-notes.md` when Android build or EAS Android job is failing.
+5. Use `references/swift-ios.md` for Swift and iOS-native implementation details.
+6. Use `references/kotlin-android-kmp.md` for Android-native Kotlin and Kotlin Multiplatform.
+7. Apply `references/mobile-security.md` before merge and release.
 
 ## Execution Workflow
 
@@ -78,7 +80,9 @@ Use this skill to make Codex outputs mobile-specific and production-oriented ins
 3. Build migration plans for web teams moving to Expo, React Native, Swift, Kotlin, or KMP.
 4. Produce integration checklists for auth, push, deep links, analytics, secure storage, and CI/CD.
 5. Diagnose build and release failures with likely root causes by platform and toolchain.
-6. Add release/security gates before merge and app store submission.
+6. Run Gradle/Android build-fix playbooks with compatibility-aware checks.
+7. Produce Expo production deployment runbooks (build, submit, OTA strategy, rollback guardrails).
+8. Add release/security gates before merge and app store submission.
 
 ## Delivery Format
 
@@ -87,12 +91,15 @@ When using this skill in a task, return:
 1. Recommended stack path with a 2-3 sentence tradeoff summary.
 2. Ordered implementation plan with platform-specific checkpoints.
 3. Integration checklist (auth, storage, push, deep links, analytics, CI/CD).
-4. Security checklist mapped to mobile controls.
-5. Release checklist for App Store and Play Store.
+4. Build-pass checklist (especially Gradle/Android for Expo and RN projects).
+5. Security checklist mapped to mobile controls.
+6. Release checklist for App Store and Play Store.
 
 ## References
 
 - React Native + Expo: [references/react-native-expo.md](references/react-native-expo.md)
+- Expo production deploy: [references/expo-production-deploy.md](references/expo-production-deploy.md)
+- Gradle build pass notes: [references/gradle-build-pass-notes.md](references/gradle-build-pass-notes.md)
 - Swift + iOS: [references/swift-ios.md](references/swift-ios.md)
 - Kotlin + Android + KMP: [references/kotlin-android-kmp.md](references/kotlin-android-kmp.md)
 - Security guardrails: [references/mobile-security.md](references/mobile-security.md)

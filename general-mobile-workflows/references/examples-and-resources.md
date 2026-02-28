@@ -32,8 +32,12 @@
 
 - Expo EAS Build: <https://docs.expo.dev/build/introduction/>
 - Expo EAS Update: <https://docs.expo.dev/eas-update/introduction/>
+- Expo EAS Submit: <https://docs.expo.dev/submit/introduction/>
+- Expo runtime versions: <https://docs.expo.dev/eas-update/runtime-versions/>
 - Fastlane docs: <https://docs.fastlane.tools/>
 - Android app signing docs: <https://developer.android.com/studio/publish/app-signing>
+- Android Studio/AGP compatibility: <https://developer.android.com/build/releases/about-agp>
+- Gradle compatibility matrix: <https://docs.gradle.org/current/userguide/compatibility.html>
 
 ## Security Standards and Checklists
 

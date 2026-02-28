@@ -28,6 +28,8 @@
 - Bump `runtimeVersion` when any native dependency, plugin behavior, or native interface changes.
 - Regenerate native projects when plugin/native config drift appears:
   - `npx expo prebuild --clean`
+- Use `references/expo-production-deploy.md` for production release flow.
+- Use `references/gradle-build-pass-notes.md` when Android/EAS jobs fail in Gradle phases.
 
 ## Common Workarounds
 
