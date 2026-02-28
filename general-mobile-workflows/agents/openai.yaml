@@ -1,0 +1,4 @@
+interface:
+  display_name: "General Mobile Workflows"
+  short_description: "Cross-platform mobile coding workflows"
+  default_prompt: "Use $general-mobile-workflows to plan and implement a secure mobile feature across Expo, React Native, Swift, and Kotlin."
