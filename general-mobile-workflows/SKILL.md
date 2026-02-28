@@ -69,6 +69,17 @@ Use this skill to deliver mobile work quickly with clear tradeoffs, safe default
 4. Reduce flaky mobile CI by pinning toolchain versions (Node, Java, Xcode, Android SDK/NDK, Gradle).
 5. Avoid brittle deep-link handling by testing cold-start, warm-start, logged-in, and logged-out paths for every route.
 
+## Codex-Specific Uses
+
+Use this skill to make Codex outputs mobile-specific and production-oriented instead of generic:
+
+1. Turn a product ask into platform-aware architecture choices with clear constraints.
+2. Generate implementation plans that separate shared logic from native-critical work.
+3. Build migration plans for web teams moving to Expo, React Native, Swift, Kotlin, or KMP.
+4. Produce integration checklists for auth, push, deep links, analytics, secure storage, and CI/CD.
+5. Diagnose build and release failures with likely root causes by platform and toolchain.
+6. Add release/security gates before merge and app store submission.
+
 ## Delivery Format
 
 When using this skill in a task, return:
