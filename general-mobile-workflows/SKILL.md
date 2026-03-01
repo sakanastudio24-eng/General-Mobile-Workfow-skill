@@ -1,6 +1,6 @@
 ---
 name: general-mobile-workflows
-description: End-to-end mobile engineering workflow for React Native, Expo, Swift, Kotlin, and Kotlin Multiplatform projects. Use when planning or building mobile features, choosing stack boundaries, integrating native modules/services, handling CI/CD and app signing, troubleshooting build/runtime issues, upgrading SDK or framework versions, passing Android Gradle builds, shipping Expo production builds/deploys, or enforcing mobile security and release guardrails.
+description: End-to-end mobile engineering workflow for React Native, Expo, Swift, Kotlin, and Kotlin Multiplatform projects. Use when planning or building mobile features, short-video feeds and timelines, choosing stack boundaries, integrating native modules/services, handling CI/CD and app signing, troubleshooting build/runtime issues, upgrading SDK or framework versions, passing Android Gradle builds, shipping Expo production builds/deploys, or enforcing mobile security and release guardrails.
 ---
 
 # General Mobile Workflows
@@ -11,11 +11,14 @@ Use this skill to deliver mobile work quickly with clear tradeoffs, safe default
 
 1. Start in `references/examples-and-resources.md` to pick a known-good pattern and sample.
 2. Use `references/react-native-expo.md` for React Native and Expo work, including EAS build/update and native module boundaries.
-3. Use `references/expo-production-deploy.md` for production-grade Expo build and store delivery.
-4. Use `references/gradle-build-pass-notes.md` when Android build or EAS Android job is failing.
-5. Use `references/swift-ios.md` for Swift and iOS-native implementation details.
-6. Use `references/kotlin-android-kmp.md` for Android-native Kotlin and Kotlin Multiplatform.
-7. Apply `references/mobile-security.md` before merge and release.
+3. Use `references/feed-ui-and-pagination.md` for feed UI behavior (vertical snapping, paging, infinite scroll).
+4. Use `references/feed-video-playback-and-caching.md` for autoplay, prefetch, caching, and playback lifecycle.
+5. Use `references/feed-backend-ranking-and-social.md` for timeline fan-out and recommendation/retrieval patterns.
+6. Use `references/expo-production-deploy.md` for production-grade Expo build and store delivery.
+7. Use `references/gradle-build-pass-notes.md` when Android build or EAS Android job is failing.
+8. Use `references/swift-ios.md` for Swift and iOS-native implementation details.
+9. Use `references/kotlin-android-kmp.md` for Android-native Kotlin and Kotlin Multiplatform.
+10. Apply `references/mobile-security.md` before merge and release.
 
 ## Execution Workflow
 
@@ -25,6 +28,7 @@ Use this skill to deliver mobile work quickly with clear tradeoffs, safe default
 4. Integrate platform services.
 5. Validate performance and reliability.
 6. Run security and release gates.
+7. Tune feed performance and retention loops.
 
 ### 1) Define Scope and Platform Split
 
@@ -63,6 +67,12 @@ Use this skill to deliver mobile work quickly with clear tradeoffs, safe default
 - Verify integrity signals (Play Integrity, App Attest/DeviceCheck) for abuse-sensitive flows.
 - Block release on critical findings from dependency and static checks.
 
+### 7) Tune Feed Performance and Retention Loops
+
+- Keep visible playback to one active item while prewarming next/previous assets.
+- Track feed health metrics (time-to-first-frame, rebuffer ratio, frame drops, watch time, session length).
+- Run controlled ranking experiments and safety checks before global rollout.
+
 ## Common Workarounds and Integrations
 
 1. Resolve Expo/RN native drift by regenerating native projects (`npx expo prebuild --clean`) and reapplying config plugin changes.
@@ -82,7 +92,9 @@ Use this skill to make Codex outputs mobile-specific and production-oriented ins
 5. Diagnose build and release failures with likely root causes by platform and toolchain.
 6. Run Gradle/Android build-fix playbooks with compatibility-aware checks.
 7. Produce Expo production deployment runbooks (build, submit, OTA strategy, rollback guardrails).
-8. Add release/security gates before merge and app store submission.
+8. Design and debug feed UX mechanics (snapping, pagination, impression tracking, autoplay lifecycle).
+9. Map feed product asks to backend fan-out and ranking architecture.
+10. Add release/security gates before merge and app store submission.
 
 ## Delivery Format
 
@@ -91,13 +103,17 @@ When using this skill in a task, return:
 1. Recommended stack path with a 2-3 sentence tradeoff summary.
 2. Ordered implementation plan with platform-specific checkpoints.
 3. Integration checklist (auth, storage, push, deep links, analytics, CI/CD).
-4. Build-pass checklist (especially Gradle/Android for Expo and RN projects).
-5. Security checklist mapped to mobile controls.
-6. Release checklist for App Store and Play Store.
+4. Feed architecture checklist (UI paging, playback lifecycle, pagination, ranking, moderation hooks).
+5. Build-pass checklist (especially Gradle/Android for Expo and RN projects).
+6. Security checklist mapped to mobile controls.
+7. Release checklist for App Store and Play Store.
 
 ## References
 
 - React Native + Expo: [references/react-native-expo.md](references/react-native-expo.md)
+- Feed UI and pagination: [references/feed-ui-and-pagination.md](references/feed-ui-and-pagination.md)
+- Feed video playback and caching: [references/feed-video-playback-and-caching.md](references/feed-video-playback-and-caching.md)
+- Feed backend and ranking: [references/feed-backend-ranking-and-social.md](references/feed-backend-ranking-and-social.md)
 - Expo production deploy: [references/expo-production-deploy.md](references/expo-production-deploy.md)
 - Gradle build pass notes: [references/gradle-build-pass-notes.md](references/gradle-build-pass-notes.md)
 - Swift + iOS: [references/swift-ios.md](references/swift-ios.md)

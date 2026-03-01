@@ -30,6 +30,7 @@
   - `npx expo prebuild --clean`
 - Use `references/expo-production-deploy.md` for production release flow.
 - Use `references/gradle-build-pass-notes.md` when Android/EAS jobs fail in Gradle phases.
+- Use `references/feed-ui-and-pagination.md` and `references/feed-video-playback-and-caching.md` for short-video feed feature delivery.
 
 ## Common Workarounds
 

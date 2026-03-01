@@ -14,6 +14,26 @@
 - React Native docs root: <https://reactnative.dev/docs/getting-started>
 - React Native architecture docs: <https://reactnative.dev/docs/the-new-architecture/landing-page>
 
+## Feed and Timeline Engineering
+
+- RecyclerViewPager: <https://github.com/taehwandev/RecyclerViewPager>
+- Android RecyclerView snapping examples: <https://github.com/jorgecastilloprz/AndroidRecyclerViewSnappingExamples>
+- Airbnb Epoxy: <https://github.com/airbnb/epoxy>
+- iOS Shimmer (archived): <https://github.com/facebookarchive/Shimmer>
+- UICollectionView paging layout: <https://github.com/ethanhuang13/UICollectionViewPagingLayout>
+- Android architecture paging samples (archived): <https://github.com/android/architecture-components-samples>
+- Now in Android sample: <https://github.com/android/nowinandroid>
+- InfiniteScrollView: <https://github.com/tedious/InfiniteScrollView>
+- ExoPlayer repo (deprecated in favor of Media3): <https://github.com/google/ExoPlayer>
+- AndroidVideoCache: <https://github.com/danikula/AndroidVideoCache>
+- VIKit: <https://github.com/VideoFlint/VIKit>
+- Stream Framework: <https://github.com/tschellenbach/Stream-Framework>
+- Stream JS: <https://github.com/getstream/stream-js>
+- Microsoft Recommenders: <https://github.com/recommenders-team/recommenders>
+- TensorFlow Recommenders: <https://github.com/tensorflow/recommenders>
+- Supabase: <https://github.com/supabase/supabase>
+- Instagramy (unofficial): <https://github.com/instagrampy/instagramy>
+
 ## Swift and iOS
 
 - Apple Developer docs root: <https://developer.apple.com/documentation/>
